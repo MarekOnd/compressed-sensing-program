@@ -38,10 +38,10 @@ def main(args):
         #st.data_editor(np.uint8((angles)/2/np.pi*256))
         st.subheader("Normalized phases (-pi,pi) -> (0,255)")
         st.image(Image.fromarray(np.uint8((angles)/360*256)),width=500)
-        strengths = np.abs(fouriered)
-        st.subheader(f"Normalized frequency strengths (0,{np.max(strengths)})->(0,255)")
+        magnitudes = np.abs(fouriered)
+        st.subheader(f"Normalized frequency magnitudes (0,{np.max(magnitudes)})->(0,255)")
         st.image(Image.fromarray(np.uint8(
-            np.round((strengths/np.max(strengths)*255))
+            np.round((magnitudes/np.max(magnitudes)*255))
             )),width=500)
 
         st.header("Inverse fourier with the highest frequencies forgotten")
@@ -56,7 +56,7 @@ def main(args):
         st.image([to_img(black_and_white), Image.fromarray(np.uint8(np.round(inverse_fouriered)))],width=500)
 
         if second_uploaded_file is not None:
-            st.header("Phases from the first image mixed with strengths from the second image")
+            st.header("Phases from the first image mixed with magnitudes from the second image")
 
             img2 = Image.open(second_uploaded_file)
             array2 = np.asarray(img2)
