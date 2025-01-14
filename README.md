@@ -5,9 +5,9 @@ a Discrete Fourier transform is `main.ipynb`.
 
 Example result:
 
-![Example 1](./example_100x100_dog_cat.png)
+![Example 1](./examples/example_100x100_dog_cat.png)
 
-![Example 2](./example_500x500_dog_cat.png)
+![Example 2](./examples/example_500x500_dog_cat.png)
 
 Sources:
 
