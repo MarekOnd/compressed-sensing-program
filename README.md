@@ -1,7 +1,8 @@
 # compressed-sensing-program
 
-Main program for mixing image magnitudes and angles after performing
-a Discrete Fourier transform is `main.ipynb`.
+A algorithm for blending images by interpolating between magnitudes and angles in the discrete Fourier transform of two images.
+
+Main script is in `main.ipynb`.
 
 Example result:
 
