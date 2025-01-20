@@ -1,8 +1,10 @@
 # compressed-sensing-program
 
-A algorithm for blending images by interpolating between magnitudes and angles in the discrete Fourier transform of two images.
+A algorithm for blending images by interpolating between magnitudes and phases in the discrete Fourier transform of two images.
 
 Main script is in `main.ipynb`.
+
+> Input images must have the same dimensions.
 
 Example result:
 
