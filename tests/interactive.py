@@ -40,10 +40,12 @@ def main(args):
         st.image(Image.fromarray(np.uint8((angles)/360*256)),width=500)
         magnitudes = np.abs(fouriered)
         st.subheader(f"Normalized frequency magnitudes (0,{np.max(magnitudes)})->(0,255)")
+        #st.image(Image.fromarray(np.uint8(
+        #    np.round((magnitudes/np.max(magnitudes)*255))
+        #    )),width=500)
         st.image(Image.fromarray(np.uint8(
-            np.round((magnitudes/np.max(magnitudes)*255))
+            np.log(magnitudes+1)*10
             )),width=500)
-
         st.header("Inverse fourier with the highest frequencies forgotten")
         st.text("Starts omitting values in a square from the right bottom corner")
         a = st.slider("Square size",0,fouriered.shape[0],fouriered.shape[0])
